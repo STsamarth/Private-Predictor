@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Private Predictor</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: linear-gradient(135deg, #0f172a, #1d4ed8);
+      min-height: 100vh;
+      color: #ffffff;
+      box-sizing: border-box;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      font-size: 2.4em;
+      margin-bottom: 15px;
+      color: #fde047;
+    }
+
+    p {
+      font-size: 1em;
+      margin-bottom: 20px;
+      color: #e5e7eb;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .btn {
+      flex: 1;
+      padding: 14px 20px;
+      border: none;
+      border-radius: 12px;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: #2563eb;
+      color: #ffffff;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-big {
+      background: #34d399;
+    }
+
+    .btn-small {
+      background: #f87171;
+    }
+
+    .btn-restart {
+      background: #facc15;
+      margin-top: 20px;
+      padding: 12px;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    .result {
+      font-size: 1.6em;
+      font-weight: bold;
+      margin: 20px 0;
+      color: #facc15;
+    }
+
+    .history {
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    .history h3 {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #fde047;
+    }
+
+    .history-item {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 8px;
+      font-size: 0.9em;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 0.85em;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer span {
+      font-weight: bold;
+      color: #facc15;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Private Predictor</h1>
+    <p>Analyze your sequence of "Big" and "Small" to predict the next move.</p>
+    <div class="button-group">
+      <button class="btn btn-big" data-value="big">Big</button>
+      <button class="btn btn-small" data-value="small">Small</button>
+    </div>
+    <div class="result" id="prediction-result">Next Prediction: Waiting for input...</div>
+    <button class="btn btn-restart" id="restart-btn">Restart</button>
+    <div class="history" id="history-list">
+      <h3>Prediction History</h3>
+    </div>
+    <div class="footer">
+      Built with ❤️ by <span>ST SAMARTH</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
